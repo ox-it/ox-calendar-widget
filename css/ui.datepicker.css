@@ -1,0 +1,26 @@
+img.ui-datepicker-trigger {
+	vertical-align: middle;
+	margin: 0 0 6px -20px;
+}
+
+.icaleventsErrorMessage {
+    background: #FEF4F1;
+    border: 1px solid #F7A68A;
+    color: #DA4310;
+    padding: 5px;
+    margin: 5px 0 5px 0;
+	border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+	-khtml-border-radius: 6px;
+	display: none;
+	text-align: center;
+}
+
+.datepickerLabel {
+	display: inline;
+}
+.rangeDateFrom,
+.rangeDateTo {
+	width: 41%;
+}

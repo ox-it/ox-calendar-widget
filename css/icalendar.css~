@@ -1,0 +1,114 @@
+/*
+	iCalendar Events Widget CSS
+	
+	Author: Frank Gregor <phranck@programmschmie.de>
+	Author URI: http://programmschmie.de
+	
+	$Id: icalendar.css 432006 2011-09-02 00:23:49Z phranck $
+*/
+/* 
+	This program is free software; you can redistribute it and/or modify
+	it under the terms of the GNU General Public License as published by
+	the Free Software Foundation; either version 2 of the License, or
+	(at your option) any later version.
+	
+	This program is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+	GNU General Public License for more details.
+	
+	You should have received a copy of the GNU General Public License
+	along with this program; if not, write to the Free Software
+	Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+	Online: http://www.gnu.org/licenses/gpl.txt
+*/
+
+
+
+/*
+	-----------------------------------------------------------------------
+	User Frontend
+	-----------------------------------------------------------------------
+*/
+
+/* the event list */
+ul.iCalEvents {
+	display: block;
+}
+
+
+/* an event list item */
+ul.iCalEvents li.iCalEventsItem {
+	border-bottom: 1px dashed #grey;
+	float: left;
+	width: 100%;
+}
+
+
+/* event list item components */
+ul.iCalEvents li.iCalEventsItem .eventListItemDateStart,
+ul.iCalEvents li.iCalEventsItem .eventListItemTimeStart {
+	font-size: 8pt;
+	float: right;
+}
+ul.iCalEvents li.iCalEventsItem .eventListItemTimeStart {
+	margin-right: 10px;
+}
+ul.iCalEvents li.iCalEventsItem .eventListItemTimeStart:after {
+	content: ' Uhr,';
+}
+
+ul.iCalEvents li.iCalEventsItem .eventListItemSummary {
+	font-size: 10pt;
+	display: block;
+	font-weight: bold;
+	float: left;
+}
+
+ul.iCalEvents li.iCalEventsItem .eventListItemDescription {
+	font-size: 10pt;
+	display: block;
+	float: left;
+	margin-top: 5px;
+}
+
+ul.iCalEvents li.iCalEventsItem .eventListItemLocation {
+	font-size: 10pt;
+	float: left;
+	display: block;
+	margin: 10px 0 0 0;
+}
+ul.iCalEvents li.iCalEventsItem .eventListItemLocation:before { content: 'Treffpunkt: '; }
+
+ul.iCalEvents li.iCalEventsItem .eventListItemURL {
+	float: left;
+}
+
+/* emtpy event list message */
+.noEvents {
+	text-align: center;
+	margin: 15px 0 0 0;
+	font-style: normal;
+	letter-spacing: 1.1pt;
+}
+
+
+
+
+/*
+	-----------------------------------------------------------------------
+	Widget Options in WP Admin
+	-----------------------------------------------------------------------
+*/
+
+.datepickerLabel {
+	margin-left: 5px;
+}
+
+hr.horizontalRule {
+	margin: 0;
+	padding: 0
+	height: 2px;
+	border: none;
+	border-top: 1px solid #ddd;
+}
