@@ -5,7 +5,7 @@
 	Plugin URI: to be done
 	Description: Shows you upcoming events for a configurable iCalendar .ics file. You can also set a range of dates. 
 	The Ox Calendar Widget is a fork of the iCalendar Events Widget (version 0.3.3) by programmschmie.de [http://programmschmie.de]
-	Version: 0.0.2
+	Version: 0.0.3
 	Author: Guido Klingbeil, Marko Jung, programmschmie.de
 	Author URI: to be done
 	Text Domain: icalevents
@@ -30,7 +30,7 @@
 // global variable to store the locations of the ongoing events
 $currentlyOccupied = array();
 
-define('OX_CALENDAR_VERSION', '0.0.2');
+define('OX_CALENDAR_VERSION', '0.0.3');
 
 class oxCalendar extends WP_Widget {
 	private	/** @type {string} */ $widgetFilePath;
@@ -529,8 +529,9 @@ class oxCalendar extends WP_Widget {
 
                                 // check if this is a currently ongoing event
                                 // and add its location to the global list of currently occupied once
+                                // if the location string is empty, it is not appended
                                 $now = date('H:i');
-                                if( strcmp($tmpStartDate, $heute) <= 0 & strcmp($tmpStartTime, $now) <= 0 & strcmp($tmpEndTime, $now ) > 0) {
+                                if( strcmp($tmpStartDate, $heute) <= 0 & strcmp($tmpStartTime, $now) <= 0 & strcmp($tmpEndTime, $now ) > 0 & !empty( $anEvent['LOCATION'] ) ) {
                                     // the event is ongoing - add its location
                                     global $currentlyOccupied;
                                     $currentlyOccupied[] = stripslashes_deep($anEvent['LOCATION']);

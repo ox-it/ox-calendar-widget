@@ -62,6 +62,9 @@ n/a
 
 == Changelog ==
 
+= 0.0.3 =
+* bug fix: empty location strings are no longer added to the array of currently occupied locations.
+
 = 0.0.2 =
 * bug fixes,
 * in cooperation with the BSG theme ability to display a message if a location is currently
