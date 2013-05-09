@@ -1,18 +1,22 @@
-=== Ox Calendar Widget ===
-Contributors: Guido Klingbeil, Marko Jung, phranck
-Donate link: http://programmschmie.de/
-Tags: icalendar, ical, plugin, widget, events, rfc2445, iCalEvents
-Requires at least: 3.1
-Tested up to: 3.5.1
-Stable tag: 1.0
+# ox-calendar-widget  
+## The University of Oxford Calendar Widget
+Copyright: [University of Oxford IT Services](http://www.it.ox.ac.uk)  
+Contributors: [Guido Klingbeil](http://www.gklingbeil.net), [Marko Jung](http://mjung.net), phranck  
+Tags: icalendar, ical, plugin, widget, events, rfc2445, iCalEvents  
+Requires at least: 3.1  
+Tested up to: 3.5.1  
+Stable tag: trunk  
+License: GPLv3 or later  
+License URI: http://www.gnu.org/licenses/gpl-3.0.html    
+GitHub URI: https://github.com/ox-it/ox-calendar-widget  
 
-This is a fork of the iCalendar Events Widget by [programmschie.de] for the
-Oxfod Blavatnik School of Government.
+
+## Short Description
 
 This widget shows you upcoming events for a configurable iCalendar .ics file.
 
 
-== Description ==
+## Description
 
 This widget shows you upcoming events for a configurable iCalendar .ics file. There are a few options you can set like:
 
@@ -28,67 +32,54 @@ This widget shows you upcoming events for a configurable iCalendar .ics file. Th
 * Setting up a range of dates that events will be shown
 * Switch on/off the event list title
 * Switch on/off if events that last an entire day should be shown
-* Switch on/off if multiday events should be shown
+* Switch on/off if multi-day events should be shown
 
-Note: if an event lasts an entire day, the start and end time of such events is not shown.
-An event lasts en entire day if the start and end times are equal but the dates are not.
+Note: if an event lasts an entire day, the start and end time of such events is not shown. An event lasts en entire day if the start and end times are equal but the dates are not.
 
-= Translations =
-* English
-* German
-* French
+The plug-in contains translations for English, German, and French.
 
-
-== Installation ==
-
-This section describes how to install the plugin and get it working.
-
-1. Upload the complete 'ox-calendar-widget/' directory to '/wp-content/plugins/' directory of your active theme
-2. Activate the plugin through the 'Plugins' menu in WordPress
-3. Go to the 'Widgets' menue in WordPress and put it on the right place of your sidebar
+This is a fork of the *iCalendar Events Widget* by programmschie.de for the
+Blavatnik School of Government at the University of Oxford. It contains patches to satisfy to the School's distinct calendar display requirements. Please consider using the original WordPress extension and donating to the original author.
 
 
-== Frequently Asked Questions ==
+## Installation
 
-n/a
+This plugin is not published in the official WordPress plugin catalogue yet. If you wish to manually install it:
 
-
-== Screenshots ==
-
-1. Widget options in your WordPress Admin
-2. The active Datepicker for selecting a date range
-3. Widget in action in your sidebar
+1. Download the plugin from [GitHub](https://github.com/ox-it/ox-calendar-widget),
+1. Upload the entire `ox-digital-signage` directory to your WordPress plugins folder, 
+1. Activate the plugin through the 'Plugins' menu in WordPress
 
 
-== Changelog ==
+## Usage
 
-= 0.0.2 =
-* bug fixes,
-* in cooperation with the BSG theme ability to display a message if a location is currently
-  occupied by an event.
-
-= 0.0.1 =
-* initial fork of the iCalendar Events Widget version 0.3.3
-
-== Upgrade Notice ==
-
-n/a
+Go to the *Widgets* menu in WordPress and place it on in one of your widget areas (i.e. your sidebar). The widget offers several configuration options as described above.
 
 
-== Notes ==
+## Frequently Asked Questions 
+
+We are happy answer any questions to the best of our knowledge.
+
+#### Can I display events in a reverse order?
+Normally you will select a "range date-to" greater than the "range date-from". But, if you set the "range date-to" lesser than the "range date-from" (or lesser than the current date, if "range date-from" is empty), then the list of events to show will be given in reverse order (aka descending).
+
+#### How do I customise the output of the widget?
+Please check the **icalendar.css** file for style customisation and the templates in the templates folder for styling options.
+
+
+## Changelog 
+
+* 0.2 
+  * bug fixes,
+  * in cooperation with the BSG theme ability to display a message if a location is currently occupied by an event.
+* 0.1
+  * initial fork of the iCalendar Events Widget version 0.3.3
+
+
+## Acknowledgements 
 
 This widget makes (in some topics partially) use of:
 
-- the [ics-parser](http://code.google.com/p/ics-parser/) class by [Martin Thoma](http://martin-thoma.de)
-- the [jQuery UI-Datepicker plugin](http://jqueryui.com/demos/datepicker/)
-- the [DateJS - Javascript Date Library](http://www.datejs.com/)
-
-= Good to know =
-Normally you will select a "range date-to" greater than the "range date-from". But, if you set the "range date-to" lesser than the "range date-from" 
-(or lesser than the current date, if "range date-from" is empty), then the list of events to show will be given in reverse order (aka descending).
-
-
-== Customization ==
-
-
-Please check the **icalendar.css** file for style customization and the templates in the templates folder for styling options.
+* the [ics-parser](http://code.google.com/p/ics-parser/) class by [Martin Thoma](http://martin-thoma.de)
+* the [jQuery UI-Datepicker plugin](http://jqueryui.com/demos/datepicker/)
+* the [DateJS - Javascript Date Library](http://www.datejs.com/)
