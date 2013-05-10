@@ -1,19 +1,20 @@
 <?php
 /*
-	Plugin Name: Oxford Calendar Widget (Ox Calendar Widget)
-	Plugin Script: oxCalendar.php
-	Plugin URI: to be done
+	Plugin Name: Oxford Calendar Widget (ox-calendar-widget)
+	Plugin URI: FIXME
 	Description: Shows you upcoming events for a configurable iCalendar .ics file. You can also set a range of dates. 
-	The Ox Calendar Widget is a fork of the iCalendar Events Widget (version 0.3.3) by programmschmie.de [http://programmschmie.de]
-	Version: 0.0.3
-	Author: Guido Klingbeil, Marko Jung, programmschmie.de
-	Author URI: to be done
+
+	Version: 0.3
+    Author: Oxford University IT Services (Guido Klingbeil, Marko Jung), programmschmie.de
+    Author URI: http://www.it.ox.ac.uk
+    License: GPLv3
+
 	Text Domain: icalevents
 	Domain Path: /languages/
 
 	This program is free software; you can redistribute it and/or modify
 	it under the terms of the GNU General Public License as published by
-	the Free Software Foundation; either version 2 of the License, or
+	the Free Software Foundation; either version 3 of the License, or
 	(at your option) any later version.
 	
 	This program is distributed in the hope that it will be useful,
@@ -30,7 +31,7 @@
 // global variable to store the locations of the ongoing events
 $currentlyOccupied = array();
 
-define('OX_CALENDAR_VERSION', '0.0.3');
+define('OX_CALENDAR_VERSION', '0.3');
 
 class oxCalendar extends WP_Widget {
 	private	/** @type {string} */ $widgetFilePath;
