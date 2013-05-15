@@ -4,7 +4,7 @@
 	Plugin URI: FIXME
 	Description: Shows you upcoming events for a configurable iCalendar .ics file. You can also set a range of dates. 
 
-	Version: 0.3
+	Version: 0.4
     Author: Oxford University IT Services (Guido Klingbeil, Marko Jung), programmschmie.de
     Author URI: http://www.it.ox.ac.uk
     License: GPLv3
@@ -531,7 +531,7 @@ class oxCalendar extends WP_Widget {
                                 // check if this is a currently ongoing event
                                 // and add its location to the global list of currently occupied once
                                 // if the location string is empty, it is not appended
-                                $now = date('H:i');
+                                $now = date_i18n('H:i');
                                 if( strcmp($tmpStartDate, $heute) <= 0 & strcmp($tmpStartTime, $now) <= 0 & strcmp($tmpEndTime, $now ) > 0 & !empty( $anEvent['LOCATION'] ) ) {
                                     // the event is ongoing - add its location
                                     global $currentlyOccupied;
