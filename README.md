@@ -68,7 +68,8 @@ Please check the **icalendar.css** file for style customisation and the template
 
 
 ## Changelog 
-
+* 0.4
+  * bug fix: use local time (instead of UTC) to determine currently occupied locations.
 * 0.3
   * bug fix: do not append an empty string to the array of currently occupied locations.
 * 0.2 
